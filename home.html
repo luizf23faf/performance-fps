@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de FPS PRO - PC Performance Analyzer</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 CALCULADORA DE FPS PRO</h1>
+            <p class="subtitle">Sistema Avançado de Análise de Performance com IA</p>
+        </header>
+        <div class="config-section">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>🔧 Processador (CPU)</label>
+                    <select id="cpu">
+                        <option value="">Selecione o processador</option>
+                        <optgroup label="Intel - 14ª Geração (2024)">
+                            <option value="i9-14900KS">Intel Core i9-14900KS</option>
+                            <option value="i9-14900K">Intel Core i9-14900K</option>
+                            <option value="i9-14900KF">Intel Core i9-14900KF</option>
+                            <option value="i9-14900">Intel Core i9-14900</option>
+                            <option value="i9-14900F">Intel Core i9-14900F</option>
+                            <option value="i7-14700K">Intel Core i7-14700K</option>
+                            <option value="i7-14700KF">Intel Core i7-14700KF</option>
+                            <option value="i7-14700">Intel Core i7-14700</option>
+                            <option value="i7-14700F">Intel Core i7-14700F</option>
+                            <option value="i5-14600K">Intel Core i5-14600K</option>
+                            <option value="i5-14600KF">Intel Core i5-14600KF</option>
+                            <option value="i5-14600">Intel Core i5-14600</option>
+                            <option value="i5-14500">Intel Core i5-14500</option>
+                            <option value="i5-14400">Intel Core i5-14400</option>
+                            <option value="i5-14400F">Intel Core i5-14400F</option>
+                            <option value="i3-14100">Intel Core i3-14100</option>
+                            <option value="i3-14100F">Intel Core i3-14100F</option>
+                        </optgroup>
+                        <optgroup label="Intel - 13ª Geração (2023)">
+                            <option value="i9-13900KS">Intel Core i9-13900KS</option>
+                            <option value="i9-13900K">Intel Core i9-13900K</option>
+                            <option value="i9-13900KF">Intel Core i9-13900KF</option>
+                            <option value="i9-13900">Intel Core i9-13900</option>
+                            <option value="i9-13900F">Intel Core i9-13900F</option>
+                            <option value="i7-13700K">Intel Core i7-13700K</option>
+                            <option value="i7-13700KF">Intel Core i7-13700KF</option>
+                            <option value="i7-13700">Intel Core i7-13700</option>
+                            <option value="i7-13700F">Intel Core i7-13700F</option>
+                            <option value="i5-13600K">Intel Core i5-13600K</option>
+                            <option value="i5-13600KF">Intel Core i5-13600KF</option>
+                            <option value="i5-13600">Intel Core i5-13600</option>
+                            <option value="i5-13500">Intel Core i5-13500</option>
+                            <option value="i5-13400">Intel Core i5-13400</option>
+                            <option value="i5-13400F">Intel Core i5-13400F</option>
+                            <option value="i3-13100">Intel Core i3-13100</option>
+                            <option value="i3-13100F">Intel Core i3-13100F</option>
+                        </optgroup>
+                        <optgroup label="Intel - 12ª Geração (2022)">
+                            <option value="i9-12900KS">Intel Core i9-12900KS</option>
+                            <option value="i9-12900K">Intel Core i9-12900K</option>
+                            <option value="i9-12900KF">Intel Core i9-12900KF</option>
+                            <option value="i9-12900">Intel Core i9-12900</option>
+                            <option value="i9-12900F">Intel Core i9-12900F</option>
+                            <option value="i7-12700K">Intel Core i7-12700K</option>
+                            <option value="i7-12700KF">Intel Core i7-12700KF</option>
+                            <option value="i7-12700">Intel Core i7-12700</option>
+                            <option value="i7-12700F">Intel Core i7-12700F</option>
+                            <option value="i5-12600K">Intel Core i5-12600K</option>
+                            <option value="i5-12600KF">Intel Core i5-12600KF</option>
+                            <option value="i5-12600">Intel Core i5-12600</option>
+                            <option value="i5-12500">Intel Core i5-12500</option>
+                            <option value="i5-12400">Intel Core i5-12400</option>
+                            <option value="i5-12400F">Intel Core i5-12400F</option>
+                            <option value="i3-12300">Intel Core i3-12300</option>
+                            <option value="i3-12100">Intel Core i3-12100</option>
+                            <option value="i3-12100F">Intel Core i3-12100F</option>
+                        </optgroup>
+                        <optgroup label="Intel - 11ª Geração (2021)">
+                            <option value="i9-11900K">Intel Core i9-11900K</option>
+                            <option value="i9-11900KF">Intel Core i9-11900KF</option>
+                            <option value="i9-11900">Intel Core i9-11900</option>
+                            <option value="i9-11900F">Intel Core i9-11900F</option>
+                            <option value="i7-11700K">Intel Core i7-11700K</option>
+                            <option value="i7-11700KF">Intel Core i7-11700KF</option>
+                            <option value="i7-11700">Intel Core i7-11700</option>
+                            <option value="i7-11700F">Intel Core i7-11700F</option>
+                            <option value="i5-11600K">Intel Core i5-11600K</option>
+                            <option value="i5-11600KF">Intel Core i5-11600KF</option>
+                            <option value="i5-11500">Intel Core i5-11500</option>
+                            <option value="i5-11400">Intel Core i5-11400</option>
+                            <option value="i5-11400F">Intel Core i5-11400F</option>
+                            <option value="i3-11100">Intel Core i3-11100</option>
+                        </optgroup>
+                        <optgroup label="Intel - 10ª Geração (2020)">
+                            <option value="i9-10900K">Intel Core i9-10900K</option>
+                            <option value="i9-10900KF">Intel Core i9-10900KF</option>
+                            <option value="i9-10850K">Intel Core i9-10850K</option>
+                            <option value="i9-10900">Intel Core i9-10900</option>
+                            <option value="i9-10900F">Intel Core i9-10900F</option>
+                            <option value="i7-10700K">Intel Core i7-10700K</option>
+                            <option value="i7-10700KF">Intel Core i7-10700KF</option>
+                            <option value="i7-10700">Intel Core i7-10700</option>
+                            <option value="i7-10700F">Intel Core i7-10700F</option>
+                            <option value="i5-10600K">Intel Core i5-10600K</option>
+                            <option value="i5-10600KF">Intel Core i5-10600KF</option>
+                            <option value="i5-10500">Intel Core i5-10500</option>
+                            <option value="i5-10400">Intel Core i5-10400</option>
+                            <option value="i5-10400F">Intel Core i5-10400F</option>
+                            <option value="i3-10300">Intel Core i3-10300</option>
+                            <option value="i3-10100">Intel Core i3-10100</option>
+                            <option value="i3-10100F">Intel Core i3-10100F</option>
+                        </optgroup>
+                        <optgroup label="Intel - 9ª Geração (2019)">
+                            <option value="i9-9900KS">Intel Core i9-9900KS</option>
+                            <option value="i9-9900K">Intel Core i9-9900K</option>
+                            <option value="i9-9900KF">Intel Core i9-9900KF</option>
+                            <option value="i9-9900">Intel Core i9-9900</option>
+                            <option value="i7-9700K">Intel Core i7-9700K</option>
+                            <option value="i7-9700KF">Intel Core i7-9700KF</option>
+                            <option value="i7-9700">Intel Core i7-9700</option>
+                            <option value="i7-9700F">Intel Core i7-9700F</option>
+                            <option value="i5-9600K">Intel Core i5-9600K</option>
+                            <option value="i5-9600KF">Intel Core i5-9600KF</option>
+                            <option value="i5-9500">Intel Core i5-9500</option>
+                            <option value="i5-9400">Intel Core i5-9400</option>
+                            <option value="i5-9400F">Intel Core i5-9400F</option>
+                            <option value="i3-9350K">Intel Core i3-9350K</option>
+                            <option value="i3-9100">Intel Core i3-9100</option>
+                            <option value="i3-9100F">Intel Core i3-9100F</option>
+                        </optgroup>
+                        <optgroup label="Intel - 8ª Geração (2018)">
+                            <option value="i7-8700K">Intel Core i7-8700K</option>
+                            <option value="i7-8700">Intel Core i7-8700</option>
+                            <option value="i5-8600K">Intel Core i5-8600K</option>
+                            <option value="i5-8500">Intel Core i5-8500</option>
+                            <option value="i5-8400">Intel Core i5-8400</option>
+                            <option value="i3-8350K">Intel Core i3-8350K</option>
+                            <option value="i3-8300">Intel Core i3-8300</option>
+                            <option value="i3-8100">Intel Core i3-8100</option>
+                        </optgroup>
+                        <optgroup label="Intel - 7ª Geração (2017)">
+                            <option value="i7-7700K">Intel Core i7-7700K</option>
+                            <option value="i7-7700">Intel Core i7-7700</option>
+                            <option value="i5-7600K">Intel Core i5-7600K</option>
+                            <option value="i5-7600">Intel Core i5-7600</option>
+                            <option value="i5-7500">Intel Core i5-7500</option>
+                            <option value="i5-7400">Intel Core i5-7400</option>
+                            <option value="i3-7350K">Intel Core i3-7350K</option>
+                            <option value="i3-7300">Intel Core i3-7300</option>
+                            <option value="i3-7100">Intel Core i3-7100</option>
+                        </optgroup>
+                        <optgroup label="Intel - 6ª Geração (2016)">
+                            <option value="i7-6700K">Intel Core i7-6700K</option>
+                            <option value="i7-6700">Intel Core i7-6700</option>
+                            <option value="i5-6600K">Intel Core i5-6600K</option>
+                            <option value="i5-6600">Intel Core i5-6600</option>
+                            <option value="i5-6500">Intel Core i5-6500</option>
+                            <option value="i5-6400">Intel Core i5-6400</option>
+                            <option value="i3-6320">Intel Core i3-6320</option>
+                            <option value="i3-6300">Intel Core i3-6300</option>
+                            <option value="i3-6100">Intel Core i3-6100</option>
+                        </optgroup>
+                        <optgroup label="Intel - 5ª Geração (2015)">
+                            <option value="i7-5775C">Intel Core i7-5775C</option>
+                            <option value="i5-5675C">Intel Core i5-5675C</option>
+                        </optgroup>
+                        <optgroup label="Intel - 4ª Geração (2013)">
+                            <option value="i7-4790K">Intel Core i7-4790K</option>
+                            <option value="i7-4790">Intel Core i7-4790</option>
+                            <option value="i7-4770K">Intel Core i7-4770K</option>
+                            <option value="i7-4770">Intel Core i7-4770</option>
+                            <option value="i5-4690K">Intel Core i5-4690K</option>
+                            <option value="i5-4670K">Intel Core i5-4670K</option>
+                            <option value="i5-4590">Intel Core i5-4590</option>
+                            <option value="i5-4460">Intel Core i5-4460</option>
+                            <option value="i3-4370">Intel Core i3-4370</option>
+                            <option value="i3-4330">Intel Core i3-4330</option>
+                            <option value="i3-4130">Intel Core i3-4130</option>
+                        </optgroup>
+                        <optgroup label="AMD Ryzen 9000 (2024)">
+                            <option value="9950X">AMD Ryzen 9 9950X</option>
+                            <option value="9900X">AMD Ryzen 9 9900X</option>
+                            <option value="9700X">AMD Ryzen 7 9700X</option>
+                            <option value="9600X">AMD Ryzen 5 9600X</option>
+                        </optgroup>
+                        <optgroup label="AMD Ryzen 7000 (2022-2023)">
+                            <option value="7950X3D">AMD Ryzen 9 7950X3D</option>
+                            <option value="7950X">AMD Ryzen 9 7950X</option>
+                            <option value="7900X3D">AMD Ryzen 9 7900X3D</option>
+                            <option value="7900X">AMD Ryzen 9 7900X</option>
+                            <option value="7900">AMD Ryzen 9 7900</option>
+                            <option value="7800X3D">AMD Ryzen 7 7800X3D</option>
+                            <option value="7700X">AMD Ryzen 7 7700X</option>
+                            <option value="7700">AMD Ryzen 7 7700</option>
+                            <option value="7600X">AMD Ryzen 5 7600X</option>
+                            <option value="7600">AMD Ryzen 5 7600</option>
+                            <option value="7500F">AMD Ryzen 5 7500F</option>
+                        </optgroup>
+                        <optgroup label="AMD Ryzen 5000 (2020-2021)">
+                            <option value="5950X">AMD Ryzen 9 5950X</option>
+                            <option value="5900X">AMD Ryzen 9 5900X</option>
+                            <option value="5900">AMD Ryzen 9 5900</option>
+                            <option value="5800X3D">AMD Ryzen 7 5800X3D</option>
+                            <option value="5800X">AMD Ryzen 7 5800X</option>
+                            <option value="5800">AMD Ryzen 7 5800</option>
+                            <option value="5700X">AMD Ryzen 7 5700X</option>
+                            <option value="5700G">AMD Ryzen 7 5700G</option>
+                            <option value="5600X">AMD Ryzen 5 5600X</option>
+                            <option value="5600">AMD Ryzen 5 5600</option>
+                            <option value="5600G">AMD Ryzen 5 5600G</option>
+                            <option value="5500">AMD Ryzen 5 5500</option>
+                            <option value="5500GT">AMD Ryzen 5 5500GT</option>
+                            <option value="5300G">AMD Ryzen 3 5300G</option>
+                        </optgroup>
+                        <optgroup label="AMD Ryzen 4000 APU (2020)">
+                            <option value="4700G">AMD Ryzen 7 4700G</option>
+                            <option value="4650G">AMD Ryzen 5 4650G</option>
+                            <option value="4350G">AMD Ryzen 3 4350G</option>
+                        </optgroup>
+                        <optgroup label="AMD Ryzen 3000 (2019)">
+                            <option value="3950X">AMD Ryzen 9 3950X</option>
+                            <option value="3900XT">AMD Ryzen 9 3900XT</option>
+                            <option value="3900X">AMD Ryzen 9 3900X</option>
+                            <option value="3800XT">AMD Ryzen 7 3800XT</option>
+                            <option value="3800X">AMD Ryzen 7 3800X</option>
+                            <option value="3700X">AMD Ryzen 7 3700X</option>
+                            <option value="3600XT">AMD Ryzen 5 3600XT</option>
+                            <option value="3600X">AMD Ryzen 5 3600X</option>
+                            <option value="3600">AMD Ryzen 5 3600</option>
+                            <option value="3500X">AMD Ryzen 5 3500X</option>
+                            <option value="3500">AMD Ryzen 5 3500</option>
+                            <option value="3400G">AMD Ryzen 5 3400G</option>
+                            <option value="3300X">AMD Ryzen 3 3300X</option>
+                            <option value="3200G">AMD Ryzen 3 3200G</option>
+                            <option value="3100">AMD Ryzen 3 3100</option>
+                        </optgroup>
+                        <optgroup label="AMD Ryzen 2000 (2018)">
+                            <option value="2700X">AMD Ryzen 7 2700X</option>
+                            <option value="2700">AMD Ryzen 7 2700</option>
+                            <option value="2700E">AMD Ryzen 7 2700E</option>
+                            <option value="2600X">AMD Ryzen 5 2600X</option>
+                            <option value="2600">AMD Ryzen 5 2600</option>
+                            <option value="2600E">AMD Ryzen 5 2600E</option>
+                            <option value="2500X">AMD Ryzen 5 2500X</option>
+                            <option value="2400G">AMD Ryzen 5 2400G</option>
+                            <option value="2300X">AMD Ryzen 3 2300X</option>
+                            <option value="2200G">AMD Ryzen 3 2200G</option>
+                        </optgroup>
+                        <optgroup label="AMD Ryzen 1000 (2017)">
+                            <option value="1800X">AMD Ryzen 7 1800X</option>
+                            <option value="1700X">AMD Ryzen 7 1700X</option>
+                            <option value="1700">AMD Ryzen 7 1700</option>
+                            <option value="1600X">AMD Ryzen 5 1600X</option>
+                            <option value="1600">AMD Ryzen 5 1600</option>
+                            <option value="1600AF">AMD Ryzen 5 1600 AF</option>
+                            <option value="1500X">AMD Ryzen 5 1500X</option>
+                            <option value="1400">AMD Ryzen 5 1400</option>
+                            <option value="1300X">AMD Ryzen 3 1300X</option>
+                            <option value="1200">AMD Ryzen 3 1200</option>
+                        </optgroup>
+                        <optgroup label="AMD Threadripper (HEDT)">
+                            <option value="3990X">AMD Threadripper 3990X</option>
+                            <option value="3970X">AMD Threadripper 3970X</option>
+                            <option value="3960X">AMD Threadripper 3960X</option>
+                            <option value="2990WX">AMD Threadripper 2990WX</option>
+                            <option value="2970WX">AMD Threadripper 2970WX</option>
+                            <option value="2950X">AMD Threadripper 2950X</option>
+                            <option value="1950X">AMD Threadripper 1950X</option>
+                            <option value="1920X">AMD Threadripper 1920X</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>🎨 Placa de Vídeo (GPU)</label>
+                    <select id="gpu">
+                        <option value="">Selecione a placa de vídeo</option>
+                        <optgroup label="NVIDIA RTX 50 Series (2025+)">
+                            <option value="RTX5090">NVIDIA GeForce RTX 5090</option>
+                            <option value="RTX5080">NVIDIA GeForce RTX 5080</option>
+                            <option value="RTX5070">NVIDIA GeForce RTX 5070</option>
+                        </optgroup>
+                        <optgroup label="NVIDIA RTX 40 Series (2022-2024)">
+                            <option value="RTX4090">NVIDIA GeForce RTX 4090</option>
+                            <option value="RTX4080S">NVIDIA GeForce RTX 4080 Super</option>
+                            <option value="RTX4080">NVIDIA GeForce RTX 4080</option>
+                            <option value="RTX4070TiS">NVIDIA GeForce RTX 4070 Ti Super</option>
+                            <option value="RTX4070Ti">NVIDIA GeForce RTX 4070 Ti</option>
+                            <option value="RTX4070S">NVIDIA GeForce RTX 4070 Super</option>
+                            <option value="RTX4070">NVIDIA GeForce RTX 4070</option>
+                            <option value="RTX4060Ti-16GB">NVIDIA GeForce RTX 4060 Ti 16GB</option>
+                            <option value="RTX4060Ti">NVIDIA GeForce RTX 4060 Ti 8GB</option>
+                            <option value="RTX4060">NVIDIA GeForce RTX 4060</option>
+                            <option value="RTX4050">NVIDIA GeForce RTX 4050</option>
+                        </optgroup>
+                        <optgroup label="NVIDIA RTX 30 Series (2020-2022)">
+                            <option value="RTX3090Ti">NVIDIA GeForce RTX 3090 Ti</option>
+                            <option value="RTX3090">NVIDIA GeForce RTX 3090</option>
+                            <option value="RTX3080Ti">NVIDIA GeForce RTX 3080 Ti</option>
+                            <option value="RTX3080-12GB">NVIDIA GeForce RTX 3080 12GB</option>
+                            <option value="RTX3080">NVIDIA GeForce RTX 3080 10GB</option>
+                            <option value="RTX3070Ti">NVIDIA GeForce RTX 3070 Ti</option>
+                            <option value="RTX3070">NVIDIA GeForce RTX 3070</option>
+                            <option value="RTX3060Ti">NVIDIA GeForce RTX 3060 Ti</option>
+                            <option value="RTX3060-12GB">NVIDIA GeForce RTX 3060 12GB</option>
+                            <option value="RTX3060-8GB">NVIDIA GeForce RTX 3060 8GB</option>
+                            <option value="RTX3050-8GB">NVIDIA GeForce RTX 3050 8GB</option>
+                            <option value="RTX3050-6GB">NVIDIA GeForce RTX 3050 6GB</option>
+                        </optgroup>
+                        <optgroup label="NVIDIA RTX 20 Series (2018-2019)">
+                            <option value="RTX2080Ti">NVIDIA GeForce RTX 2080 Ti</option>
+                            <option value="RTX2080S">NVIDIA GeForce RTX 2080 Super</option>
+                            <option value="RTX2080">NVIDIA GeForce RTX 2080</option>
+                            <option value="RTX2070S">NVIDIA GeForce RTX 2070 Super</option>
+                            <option value="RTX2070">NVIDIA GeForce RTX 2070</option>
+                            <option value="RTX2060S">NVIDIA GeForce RTX 2060 Super</option>
+                            <option value="RTX2060-12GB">NVIDIA GeForce RTX 2060 12GB</option>
+                            <option value="RTX2060">NVIDIA GeForce RTX 2060 6GB</option>
+                        </optgroup>
+                        <optgroup label="NVIDIA GTX 16 Series (2019)">
+                            <option value="GTX1660Ti">NVIDIA GeForce GTX 1660 Ti</option>
+                            <option value="GTX1660S">NVIDIA GeForce GTX 1660 Super</option>
+                            <option value="GTX1660">NVIDIA GeForce GTX 1660</option>
+                            <option value="GTX1650S">NVIDIA GeForce GTX 1650 Super</option>
+                            <option value="GTX1650-GDDR6">NVIDIA GeForce GTX 1650 GDDR6</option>
+                            <option value="GTX1650">NVIDIA GeForce GTX 1650</option>
+                            <option value="GTX1630">NVIDIA GeForce GTX 1630</option>
+                        </optgroup>
+                        <optgroup label="NVIDIA GTX 10 Series (2016-2017)">
+                            <option value="GTX1080Ti">NVIDIA GeForce GTX 1080 Ti</option>
+                            <option value="GTX1080">NVIDIA GeForce GTX 1080</option>
+                            <option value="GTX1070Ti">NVIDIA GeForce GTX 1070 Ti</option>
+                            <option value="GTX1070">NVIDIA GeForce GTX 1070</option>
+                            <option value="GTX1060-6GB">NVIDIA GeForce GTX 1060 6GB</option>
+                            <option value="GTX1060-3GB">NVIDIA GeForce GTX 1060 3GB</option>
+                            <option value="GTX1050Ti">NVIDIA GeForce GTX 1050 Ti</option>
+                            <option value="GTX1050-3GB">NVIDIA GeForce GTX 1050 3GB</option>
+                            <option value="GTX1050">NVIDIA GeForce GTX 1050 2GB</option>
+                        </optgroup>
+                        <optgroup label="NVIDIA GTX 900 Series (2014-2015)">
+                            <option value="GTX980Ti">NVIDIA GeForce GTX 980 Ti</option>
+                            <option value="GTX980">NVIDIA GeForce GTX 980</option>
+                            <option value="GTX970">NVIDIA GeForce GTX 970</option>
+                            <option value="GTX960-4GB">NVIDIA GeForce GTX 960 4GB</option>
+                            <option value="GTX960">NVIDIA GeForce GTX 960 2GB</option>
+                            <option value="GTX950">NVIDIA GeForce GTX 950</option>
+                        </optgroup>
+                        <optgroup label="NVIDIA GTX 700 Series (2013-2014)">
+                            <option value="GTX780Ti">NVIDIA GeForce GTX 780 Ti</option>
+                            <option value="GTX780">NVIDIA GeForce GTX 780</option>
+                            <option value="GTX770">NVIDIA GeForce GTX 770</option>
+                            <option value="GTX760">NVIDIA GeForce GTX 760</option>
+                            <option value="GTX750Ti">NVIDIA GeForce GTX 750 Ti</option>
+                            <option value="GTX750">NVIDIA GeForce GTX 750</option>
+                        </optgroup>
+                        <optgroup label="NVIDIA GTX 600 Series (2012)">
+                            <option value="GTX690">NVIDIA GeForce GTX 690</option>
+                            <option value="GTX680">NVIDIA GeForce GTX 680</option>
+                            <option value="GTX670">NVIDIA GeForce GTX 670</option>
+                            <option value="GTX660Ti">NVIDIA GeForce GTX 660 Ti</option>
+                            <option value="GTX660">NVIDIA GeForce GTX 660</option>
+                            <option value="GTX650Ti">NVIDIA GeForce GTX 650 Ti</option>
+                            <option value="GTX650">NVIDIA GeForce GTX 650</option>
+                        </optgroup>
+                        <optgroup label="AMD Radeon RX 7000 (2022-2024)">
+                            <option value="RX7900XTX">AMD Radeon RX 7900 XTX</option>
+                            <option value="RX7900XT">AMD Radeon RX 7900 XT</option>
+                            <option value="RX7900GRE">AMD Radeon RX 7900 GRE</option>
+                            <option value="RX7800XT">AMD Radeon RX 7800 XT</option>
+                            <option value="RX7700XT">AMD Radeon RX 7700 XT</option>
+                            <option value="RX7600XT-16GB">AMD Radeon RX 7600 XT 16GB</option>
+                            <option value="RX7600XT">AMD Radeon RX 7600 XT 8GB</option>
+                            <option value="RX7600">AMD Radeon RX 7600</option>
+                        </optgroup>
+                        <optgroup label="AMD Radeon RX 6000 (2020-2021)">
+                            <option value="RX6950XT">AMD Radeon RX 6950 XT</option>
+                            <option value="RX6900XT">AMD Radeon RX 6900 XT</option>
+                            <option value="RX6800XT">AMD Radeon RX 6800 XT</option>
+                            <option value="RX6800">AMD Radeon RX 6800</option>
+                            <option value="RX6750XT">AMD Radeon RX 6750 XT</option>
+                            <option value="RX6700XT">AMD Radeon RX 6700 XT</option>
+                            <option value="RX6700-10GB">AMD Radeon RX 6700 10GB</option>
+                            <option value="RX6650XT">AMD Radeon RX 6650 XT</option>
+                            <option value="RX6600XT">AMD Radeon RX 6600 XT</option>
+                            <option value="RX6600">AMD Radeon RX 6600</option>
+                            <option value="RX6500XT">AMD Radeon RX 6500 XT</option>
+                            <option value="RX6400">AMD Radeon RX 6400</option>
+                        </optgroup>
+                        <optgroup label="AMD Radeon RX 5000 (2019-2020)">
+                            <option value="RX5700XT">AMD Radeon RX 5700 XT</option>
+                            <option value="RX5700">AMD Radeon RX 5700</option>
+                            <option value="RX5600XT">AMD Radeon RX 5600 XT</option>
+                            <option value="RX5600">AMD Radeon RX 5600</option>
+                            <option value="RX5500XT-8GB">AMD Radeon RX 5500 XT 8GB</option>
+                            <option value="RX5500XT">AMD Radeon RX 5500 XT 4GB</option>
+                            <option value="RX5500">AMD Radeon RX 5500</option>
+                        </optgroup>
+                        <optgroup label="AMD Radeon RX Vega (2017-2018)">
+                            <option value="VEGA64-LC">AMD Radeon RX Vega 64 Liquid</option>
+                            <option value="VEGA64">AMD Radeon RX Vega 64</option>
+                            <option value="VEGA56">AMD Radeon RX Vega 56</option>
+                            <option value="VEGAFEVII">AMD Radeon VII</option>
+                        </optgroup>
+                        <optgroup label="AMD Radeon RX 500 Series (2017)">
+                            <option value="RX590">AMD Radeon RX 590</option>
+                            <option value="RX580-8GB">AMD Radeon RX 580 8GB</option>
+                            <option value="RX580">AMD Radeon RX 580 4GB</option>
+                            <option value="RX570-8GB">AMD Radeon RX 570 8GB</option>
+                            <option value="RX570">AMD Radeon RX 570 4GB</option>
+                            <option value="RX560-4GB">AMD Radeon RX 560 4GB</option>
+                            <option value="RX560">AMD Radeon RX 560 2GB</option>
+                            <option value="RX550">AMD Radeon RX 550</option>
+                        </optgroup>
+                        <optgroup label="AMD Radeon RX 400 Series (2016)">
+                            <option value="RX480-8GB">AMD Radeon RX 480 8GB</option>
+                            <option value="RX480">AMD Radeon RX 480 4GB</option>
+                            <option value="RX470-8GB">AMD Radeon RX 470 8GB</option>
+                            <option value="RX470">AMD Radeon RX 470 4GB</option>
+                            <option value="RX460-4GB">AMD Radeon RX 460 4GB</option>
+                            <option value="RX460">AMD Radeon RX 460 2GB</option>
+                        </optgroup>
+                        <optgroup label="AMD Radeon R9 Series (2013-2015)">
+                            <option value="R9-FURY-X">AMD Radeon R9 Fury X</option>
+                            <option value="R9-FURY">AMD Radeon R9 Fury</option>
+                            <option value="R9-NANO">AMD Radeon R9 Nano</option>
+                            <option value="R9-390X">AMD Radeon R9 390X</option>
+                            <option value="R9-390">AMD Radeon R9 390</option>
+                            <option value="R9-380X">AMD Radeon R9 380X</option>
+                            <option value="R9-380">AMD Radeon R9 380</option>
+                            <option value="R9-290X">AMD Radeon R9 290X</option>
+                            <option value="R9-290">AMD Radeon R9 290</option>
+                            <option value="R9-280X">AMD Radeon R9 280X</option>
+                            <option value="R9-280">AMD Radeon R9 280</option>
+                            <option value="R9-270X">AMD Radeon R9 270X</option>
+                            <option value="R9-270">AMD Radeon R9 270</option>
+                        </optgroup>
+                        <optgroup label="AMD Radeon R7/R5 Series (2013-2015)">
+                            <option value="R7-370">AMD Radeon R7 370</option>
+                            <option value="R7-360">AMD Radeon R7 360</option>
+                            <option value="R7-265">AMD Radeon R7 265</option>
+                            <option value="R7-260X">AMD Radeon R7 260X</option>
+                            <option value="R7-260">AMD Radeon R7 260</option>
+                            <option value="R7-250X">AMD Radeon R7 250X</option>
+                            <option value="R7-250">AMD Radeon R7 250</option>
+                        </optgroup>
+                        <optgroup label="Intel Arc (2022-2023)">
+                            <option value="A770-16GB">Intel Arc A770 16GB</option>
+                            <option value="A770">Intel Arc A770 8GB</option>
+                            <option value="A750">Intel Arc A750</option>
+                            <option value="A580">Intel Arc A580</option>
+                            <option value="A380">Intel Arc A380</option>
+                            <option value="A310">Intel Arc A310</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>🖥️ Resolução do Monitor</label>
+                    <select id="resolution">
+                        <option value="">Selecione a resolução</option>
+                        <option value="720p">1280x720 (HD)</option>
+                        <option value="900p">1600x900 (HD+)</option>
+                        <option value="1080p">1920x1080 (Full HD)</option>
+                        <option value="ultrawide-1080">2560x1080 (Ultrawide FHD)</option>
+                        <option value="1440p">2560x1440 (2K/QHD)</option>
+                        <option value="ultrawide">3440x1440 (Ultrawide QHD)</option>
+                        <option value="4K">3840x2160 (4K/UHD)</option>
+                        <option value="5K">5120x2880 (5K)</option>
+                        <option value="8K">7680x4320 (8K)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>⚙️ Qualidade Gráfica</label>
+                    <select id="quality">
+                        <option value="">Selecione a qualidade</option>
+                        <option value="low">Baixo (Low)</option>
+                        <option value="medium">Médio (Medium)</option>
+                        <option value="high">Alto (High)</option>
+                        <option value="ultra">Ultra (Maximum)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>🎮 Jogo</label>
+                <select id="game">
+                    <option value="">Selecione o jogo</option>
+                    <optgroup label="Battle Royale">
+                        <option value="fortnite">Fortnite</option>
+                        <option value="apex">Apex Legends</option>
+                        <option value="warzone">Call of Duty: Warzone</option>
+                        <option value="warzone2">Call of Duty: Warzone 2.0</option>
+                        <option value="pubg">PUBG: Battlegrounds</option>
+                        <option value="naraka">Naraka: Bladepoint</option>
+                        <option value="hyperscape">Hyper Scape</option>
+                        <option value="spellbreak">Spellbreak</option>
+                        <option value="super-people">Super People</option>
+                    </optgroup>
+                    <optgroup label="FPS / Shooters Competitivos">
+                        <option value="valorant">Valorant</option>
+                        <option value="csgo">Counter-Strike 2</option>
+                        <option value="cs16">Counter-Strike 1.6</option>
+                        <option value="css">Counter-Strike: Source</option>
+                        <option value="overwatch2">Overwatch 2</option>
+                        <option value="cod-mw3">Call of Duty: Modern Warfare III</option>
+                        <option value="cod-mw2">Call of Duty: Modern Warfare II</option>
+                        <option value="cod-bocw">Call of Duty: Black Ops Cold War</option>
+                        <option value="cod-vanguard">Call of Duty: Vanguard</option>
+                        <option value="battlefield2042">Battlefield 2042</option>
+                        <option value="battlefield5">Battlefield V</option>
+                        <option value="battlefield1">Battlefield 1</option>
+                        <option value="battlefield4">Battlefield 4</option>
+                        <option value="rainbow6">Rainbow Six Siege</option>
+                        <option value="destiny2">Destiny 2</option>
+                        <option value="halo">Halo Infinite</option>
+                        <option value="titanfall2">Titanfall 2</option>
+                        <option value="splitgate">Splitgate</option>
+                        <option value="the-finals">The Finals</option>
+                        <option value="xdefiant">XDefiant</option>
+                        <option value="insurgency">Insurgency: Sandstorm</option>
+                        <option value="hunt-showdown">Hunt: Showdown</option>
+                        <option value="escape-tarkov">Escape from Tarkov</option>
+                        <option value="squad">Squad</option>
+                        <option value="arma3">ARMA 3</option>
+                        <option value="hell-let-loose">Hell Let Loose</option>
+                        <option value="ready-or-not">Ready or Not</option>
+                    </optgroup>
+                    <optgroup label="MOBA / Estratégia">
+                        <option value="lol">League of Legends</option>
+                        <option value="dota2">Dota 2</option>
+                        <option value="smite">Smite</option>
+                        <option value="hots">Heroes of the Storm</option>
+                        <option value="aoe4">Age of Empires IV</option>
+                        <option value="aoe2">Age of Empires II: Definitive Edition</option>
+                        <option value="starcraft2">StarCraft II</option>
+                        <option value="total-war-wh3">Total War: Warhammer III</option>
+                        <option value="total-war-wh2">Total War: Warhammer II</option>
+                        <option value="company-heroes3">Company of Heroes 3</option>
+                        <option value="civ6">Civilization VI</option>
+                        <option value="humankind">Humankind</option>
+                        <option value="stellaris">Stellaris</option>
+                        <option value="crusader-kings3">Crusader Kings III</option>
+                        <option value="they-are-billions">They Are Billions</option>
+                    </optgroup>
+                    <optgroup label="MMO / RPG Online">
+                        <option value="wow">World of Warcraft</option>
+                        <option value="wow-classic">WoW Classic</option>
+                        <option value="ffxiv">Final Fantasy XIV</option>
+                        <option value="gw2">Guild Wars 2</option>
+                        <option value="eso">The Elder Scrolls Online</option>
+                        <option value="lost-ark">Lost Ark</option>
+                        <option value="new-world">New World</option>
+                        <option value="bdo">Black Desert Online</option>
+                        <option value="throne-liberty">Throne and Liberty</option>
+                        <option value="pso2">Phantasy Star Online 2</option>
+                        <option value="swtor">Star Wars: The Old Republic</option>
+                        <option value="albion">Albion Online</option>
+                        <option value="runescape">RuneScape</option>
+                        <option value="osrs">Old School RuneScape</option>
+                    </optgroup>
+                    <optgroup label="AAA Open World">
+                        <option value="cyberpunk">Cyberpunk 2077</option>
+                        <option value="rdr2">Red Dead Redemption 2</option>
+                        <option value="gta5">GTA V</option>
+                        <option value="gta4">GTA IV</option>
+                        <option value="witcher3">The Witcher 3</option>
+                        <option value="ac-valhalla">Assassin's Creed Valhalla</option>
+                        <option value="ac-odyssey">Assassin's Creed Odyssey</option>
+                        <option value="ac-origins">Assassin's Creed Origins</option>
+                        <option value="ac-mirage">Assassin's Creed Mirage</option>
+                        <option value="horizon">Horizon Forbidden West</option>
+                        <option value="horizon-zd">Horizon Zero Dawn</option>
+                        <option value="dying-light2">Dying Light 2</option>
+                        <option value="dying-light">Dying Light</option>
+                        <option value="far-cry6">Far Cry 6</option>
+                        <option value="far-cry5">Far Cry 5</option>
+                        <option value="far-cry4">Far Cry 4</option>
+                        <option value="watch-dogs-legion">Watch Dogs: Legion</option>
+                        <option value="watch-dogs2">Watch Dogs 2</option>
+                        <option value="saints-row">Saints Row (2022)</option>
+                        <option value="mafia-de">Mafia: Definitive Edition</option>
+                        <option value="just-cause4">Just Cause 4</option>
+                        <option value="sleeping-dogs">Sleeping Dogs</option>
+                    </optgroup>
+                    <optgroup label="Ação / Aventura AAA">
+                        <option value="spider-man">Spider-Man Remastered</option>
+                        <option value="spider-man-mm">Spider-Man: Miles Morales</option>
+                        <option value="god-of-war">God of War (2018)</option>
+                        <option value="god-of-war-ragnarok">God of War: Ragnarök</option>
+                        <option value="last-of-us">The Last of Us Part I</option>
+                        <option value="last-of-us2">The Last of Us Part II</option>
+                        <option value="uncharted">Uncharted: Legacy Collection</option>
+                        <option value="days-gone">Days Gone</option>
+                        <option value="tomb-raider">Shadow of the Tomb Raider</option>
+                        <option value="rise-tomb-raider">Rise of the Tomb Raider</option>
+                        <option value="control">Control</option>
+                        <option value="metro-exodus">Metro Exodus</option>
+                        <option value="metro-ll">Metro: Last Light</option>
+                        <option value="metro-2033">Metro 2033 Redux</option>
+                        <option value="ghostwire">Ghostwire: Tokyo</option>
+                        <option value="deathloop">Deathloop</option>
+                        <option value="prey">Prey (2017)</option>
+                        <option value="dishonored2">Dishonored 2</option>
+                        <option value="quantum-break">Quantum Break</option>
+                        <option value="alan-wake2">Alan Wake 2</option>
+                        <option value="alan-wake">Alan Wake Remastered</option>
+                        <option value="max-payne3">Max Payne 3</option>
+                    </optgroup>
+                    <optgroup label="Corrida">
+                        <option value="forza-horizon5">Forza Horizon 5</option>
+                        <option value="forza-horizon4">Forza Horizon 4</option>
+                        <option value="forza-motorsport">Forza Motorsport (2023)</option>
+                        <option value="forza-motorsport7">Forza Motorsport 7</option>
+                        <option value="f1-2023">F1 2023</option>
+                        <option value="f1-22">F1 22</option>
+                        <option value="gran-turismo7">Gran Turismo 7</option>
+                        <option value="need-for-speed">Need for Speed Unbound</option>
+                        <option value="nfs-heat">Need for Speed Heat</option>
+                        <option value="dirt5">DiRT 5</option>
+                        <option value="dirt-rally2">DiRT Rally 2.0</option>
+                        <option value="crew-motorfest">The Crew Motorfest</option>
+                        <option value="crew2">The Crew 2</option>
+                        <option value="project-cars3">Project CARS 3</option>
+                        <option value="assetto-corsa">Assetto Corsa</option>
+                        <option value="acc">Assetto Corsa Competizione</option>
+                        <option value="iracing">iRacing</option>
+                        <option value="beamng">BeamNG.drive</option>
+                        <option value="wreckfest">Wreckfest</option>
+                    </optgroup>
+                    <optgroup label="Simulação / Sandbox">
+                        <option value="minecraft">Minecraft (com shaders)</option>
+                        <option value="minecraft-vanilla">Minecraft (vanilla)</option>
+                        <option value="cities-skylines2">Cities: Skylines II</option>
+                        <option value="cities-skylines">Cities: Skylines</option>
+                        <option value="flight-sim">Microsoft Flight Simulator</option>
+                        <option value="planet-zoo">Planet Zoo</option>
+                        <option value="planet-coaster">Planet Coaster</option>
+                        <option value="satisfactory">Satisfactory</option>
+                        <option value="factorio">Factorio</option>
+                        <option value="valheim">Valheim</option>
+                        <option value="farming-sim22">Farming Simulator 22</option>
+                        <option value="truck-sim-euro2">Euro Truck Simulator 2</option>
+                        <option value="truck-sim-american">American Truck Simulator</option>
+                        <option value="kerbal">Kerbal Space Program</option>
+                        <option value="space-engineers">Space Engineers</option>
+                        <option value="empyrion">Empyrion - Galactic Survival</option>
+                    </optgroup>
+                    <optgroup label="Survival / Craft">
+                        <option value="rust">Rust</option>
+                        <option value="ark">ARK: Survival Evolved</option>
+                        <option value="ark-ascended">ARK: Survival Ascended</option>
+                        <option value="7-days">7 Days to Die</option>
+                        <option value="sons-forest">Sons of The Forest</option>
+                        <option value="the-forest">The Forest</option>
+                        <option value="conan">Conan Exiles</option>
+                        <option value="dayz">DayZ</option>
+                        <option value="green-hell">Green Hell</option>
+                        <option value="subnautica">Subnautica</option>
+                        <option value="subnautica-bz">Subnautica: Below Zero</option>
+                        <option value="raft">Raft</option>
+                        <option value="dont-starve">Don't Starve Together</option>
+                        <option value="grounded">Grounded</option>
+                        <option value="v-rising">V Rising</option>
+                        <option value="enshrouded">Enshrouded</option>
+                    </optgroup>
+                    <optgroup label="Horror">
+                        <option value="re-village">Resident Evil Village</option>
+                        <option value="re4-remake">Resident Evil 4 Remake</option>
+                        <option value="re3-remake">Resident Evil 3 Remake</option>
+                        <option value="re2-remake">Resident Evil 2 Remake</option>
+                        <option value="re7">Resident Evil 7</option>
+                        <option value="dead-space">Dead Space Remake</option>
+                        <option value="dead-space-original">Dead Space (2008)</option>
+                        <option value="outlast-trials">Outlast Trials</option>
+                        <option value="outlast2">Outlast 2</option>
+                        <option value="outlast">Outlast</option>
+                        <option value="evil-within2">The Evil Within 2</option>
+                        <option value="evil-within">The Evil Within</option>
+                        <option value="phasmophobia">Phasmophobia</option>
+                        <option value="silent-hill2">Silent Hill 2 Remake</option>
+                        <option value="amnesia-rebirth">Amnesia: Rebirth</option>
+                        <option value="soma">SOMA</option>
+                        <option value="layers-of-fear">Layers of Fear</option>
+                        <option value="observer">Observer</option>
+                        <option value="dead-by-daylight">Dead by Daylight</option>
+                    </optgroup>
+                    <optgroup label="Luta">
+                        <option value="street-fighter6">Street Fighter 6</option>
+                        <option value="street-fighter5">Street Fighter V</option>
+                        <option value="mortal-kombat1">Mortal Kombat 1</option>
+                        <option value="mortal-kombat11">Mortal Kombat 11</option>
+                        <option value="tekken8">Tekken 8</option>
+                        <option value="tekken7">Tekken 7</option>
+                        <option value="guilty-gear">Guilty Gear -Strive-</option>
+                        <option value="dragon-ball-fighterz">Dragon Ball FighterZ</option>
+                        <option value="granblue-versus">Granblue Fantasy Versus</option>
+                        <option value="soulcalibur6">Soulcalibur VI</option>
+                        <option value="injustice2">Injustice 2</option>
+                        <option value="blazblue">BlazBlue: Cross Tag Battle</option>
+                    </optgroup>
+                    <optgroup label="Souls-like / Difíceis">
+                        <option value="elden-ring">Elden Ring</option>
+                        <option value="dark-souls3">Dark Souls III</option>
+                        <option value="dark-souls2">Dark Souls II</option>
+                        <option value="dark-souls">Dark Souls Remastered</option>
+                        <option value="sekiro">Sekiro: Shadows Die Twice</option>
+                        <option value="bloodborne">Bloodborne (Emulado)</option>
+                        <option value="demons-souls">Demon's Souls</option>
+                        <option value="lies-of-p">Lies of P</option>
+                        <option value="lords-fallen">Lords of the Fallen</option>
+                        <option value="nioh2">Nioh 2</option>
+                        <option value="nioh">Nioh</option>
+                        <option value="mortal-shell">Mortal Shell</option>
+                        <option value="code-vein">Code Vein</option>
+                        <option value="surge2">The Surge 2</option>
+                    </optgroup>
+                    <optgroup label="RPG / Aventura">
+                        <option value="baldurs-gate3">Baldur's Gate 3</option>
+                        <option value="starfield">Starfield</option>
+                        <option value="skyrim-se">Skyrim: Special Edition</option>
+                        <option value="fallout4">Fallout 4</option>
+                        <option value="fallout76">Fallout 76</option>
+                        <option value="dragon-age">Dragon Age: Inquisition</option>
+                        <option value="mass-effect-le">Mass Effect Legendary Edition</option>
+                        <option value="atomic-heart">Atomic Heart</option>
+                        <option value="remnant2">Remnant 2</option>
+                        <option value="remnant">Remnant: From the Ashes</option>
+                        <option value="outer-worlds">The Outer Worlds</option>
+                        <option value="wasteland3">Wasteland 3</option>
+                        <option value="divinity2">Divinity: Original Sin 2</option>
+                        <option value="pathfinder-wrath">Pathfinder: Wrath of the Righteous</option>
+                        <option value="kingdom-come">Kingdom Come: Deliverance</option>
+                        <option value="greedfall">GreedFall</option>
+                    </optgroup>
+                    <optgroup label="Indie / Pixel Art / 2D">
+                        <option value="stray">Stray</option>
+                        <option value="hades">Hades</option>
+                        <option value="hades2">Hades II</option>
+                        <option value="hollow-knight">Hollow Knight</option>
+                        <option value="celeste">Celeste</option>
+                        <option value="terraria">Terraria</option>
+                        <option value="stardew">Stardew Valley</option>
+                        <option value="disco-elysium">Disco Elysium</option>
+                        <option value="dead-cells">Dead Cells</option>
+                        <option value="cuphead">Cuphead</option>
+                        <option value="ori-wotw">Ori and the Will of the Wisps</option>
+                        <option value="ori-bf">Ori and the Blind Forest</option>
+                        <option value="undertale">Undertale</option>
+                        <option value="deltarune">Deltarune</option>
+                        <option value="shovel-knight">Shovel Knight</option>
+                        <option value="binding-isaac">The Binding of Isaac</option>
+                        <option value="enter-gungeon">Enter the Gungeon</option>
+                        <option value="risk-of-rain2">Risk of Rain 2</option>
+                        <option value="vampire-survivors">Vampire Survivors</option>
+                    </optgroup>
+                    <optgroup label="Co-op / Multiplayer">
+                        <option value="palworld">Palworld</option>
+                        <option value="lethal-company">Lethal Company</option>
+                        <option value="helldivers2">Helldivers 2</option>
+                        <option value="deep-rock">Deep Rock Galactic</option>
+                        <option value="left4dead2">Left 4 Dead 2</option>
+                        <option value="back4blood">Back 4 Blood</option>
+                        <option value="warhammer-darktide">Warhammer 40K: Darktide</option>
+                        <option value="warhammer-vermintide2">Vermintide 2</option>
+                        <option value="payday2">Payday 2</option>
+                        <option value="payday3">Payday 3</option>
+                        <option value="killing-floor2">Killing Floor 2</option>
+                        <option value="gtfo">GTFO</option>
+                        <option value="it-takes-two">It Takes Two</option>
+                        <option value="a-way-out">A Way Out</option>
+                        <option value="overcooked2">Overcooked 2</option>
+                        <option value="among-us">Among Us</option>
+                    </optgroup>
+                    <optgroup label="Plataforma / Puzzle">
+                        <option value="portal2">Portal 2</option>
+                        <option value="portal">Portal</option>
+                        <option value="mirrors-edge">Mirror's Edge Catalyst</option>
+                        <option value="little-nightmares2">Little Nightmares II</option>
+                        <option value="little-nightmares">Little Nightmares</option>
+                        <option value="inside">INSIDE</option>
+                        <option value="limbo">LIMBO</option>
+                        <option value="witness">The Witness</option>
+                        <option value="talos-principle">The Talos Principle</option>
+                        <option value="superhot">SUPERHOT</option>
+                    </optgroup>
+                    <optgroup label="Esportes">
+                        <option value="fc24">EA Sports FC 24</option>
+                        <option value="fifa23">FIFA 23</option>
+                        <option value="nba2k24">NBA 2K24</option>
+                        <option value="nba2k23">NBA 2K23</option>
+                        <option value="madden24">Madden NFL 24</option>
+                        <option value="wwe2k23">WWE 2K23</option>
+                        <option value="rocket-league">Rocket League</option>
+                        <option value="riders-republic">Riders Republic</option>
+                    </optgroup>
+                </select>
+
+            <button class="calculate-btn" id="btnSalvar">
+                ⚡ CALCULAR FPS COM IA
+            </button>
+        </div>
+
+        <div class="results" id="results">
+            <div id="historySection" class="config-section" style="display:none; margin-top:30px;">
+    <h2 style="color:#ff0000; text-align:center; margin-bottom:20px;">
+        📜 Histórico de Cálculos
+    </h2>
+
+    <div id="historyList" style="line-height:1.8; font-size:1.1em; color:#ddd;">
+        <!-- Histórico será carregado aqui -->
+    </div>
+
+    <button class="calculate-btn" style="margin-top:20px;" onclick="clearHistory()">
+        🗑️ Limpar Histórico
+    </button>
+</div>
+
+            <h2>📊 ANÁLISE COMPLETA DE PERFORMANCE</h2>
+            
+            <div class="fps-grid">
+                <div class="fps-card">
+                    <div class="fps-label">FPS Mínimo</div>
+                    <div class="fps-value" id="minFps">--</div>
+                    <div class="fps-subtitle">Pior cenário</div>
+                </div>
+                <div class="fps-card">
+                    <div class="fps-label">FPS Médio</div>
+                    <div class="fps-value" id="avgFps">--</div>
+                    <div class="fps-subtitle">Gameplay típico</div>
+                </div>
+                <div class="fps-card">
+                    <div class="fps-label">FPS Máximo</div>
+                    <div class="fps-value" id="maxFps">--</div>
+                    <div class="fps-subtitle">Melhor cenário</div>
+                </div>
+            </div>
+
+            <div class="performance-indicator">
+                <h3>Nível de Performance</h3>
+                <div class="performance-bar">
+                    <div class="performance-fill" id="perfBar">0%</div>
+                </div>
+                <p id="perfText" style="margin-top: 15px; color: #ff6666; line-height: 1.8;"></p>
+            </div>
+
+            <div class="game-info">
+                <strong style="color: #ff6666; font-size: 1.1em;">⚙️ Configuração Testada:</strong>
+                <p id="configInfo" style="margin-top: 15px; color: #ccc;"></p>
+            </div>
+
+            <button class="calculate-btn" onclick="voltarConfig()" stAyle="margin-top: 20px;">
+                ⬅️ VOLTAR E TESTAR OUTRO JOGO
+            </button>
+        </div>
+
+        <footer>
+            <p>🎮 FPS Calculator PRO 2025 - Sistema Avançado com Algoritmo de IA</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Cálculos baseados em benchmarks reais e podem variar com drivers e otimizações</p>
+        </footer>
+        <button id="btnSalvar">Salvar no Firebase</button>
+
+    </div>
+    <!-- Firebase App -->
+
+    <script src="script.js" type="module">
+        
+    </script>
+
+</body>
+</html>
