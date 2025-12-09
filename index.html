@@ -471,30 +471,6 @@
         </div>
     </div>
 
-    <!-- Modal de Configuração -->
-    <div class="modal" id="configModal">
-        <div class="modal-content">
-            <div class="modal-header">⚙️ Configuração Necessária</div>
-            <div class="info-box">
-                <strong>Para ativar o login social, configure no Firebase Console:</strong>
-                <ol>
-                    <li>Acesse: <code>console.firebase.google.com</code></li>
-                    <li>Selecione seu projeto <code>fps-performance</code></li>
-                    <li>Vá em <strong>Authentication → Sign-in method</strong></li>
-                    <li>Ative <strong>Google</strong> e <strong>GitHub</strong></li>
-                    <li>Em <strong>Settings → Authorized domains</strong>, adicione:
-                        <ul style="margin-top: 5px;">
-                            <li><code>localhost</code></li>
-                            <li><code>127.0.0.1</code></li>
-                            <li><code>performance-fps.vercel.app</code></li>
-                            <li>Seu domínio atual: <code id="currentDomain"></code></li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
-            <button type="button" class="modal-close" id="closeConfigBtn">Entendi</button>
-        </div>
-    </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
@@ -544,9 +520,7 @@
         const forgotPasswordModal = document.getElementById('forgotPasswordModal');
         const closeModalBtn = document.getElementById('closeModalBtn');
         const sendResetBtn = document.getElementById('sendResetBtn');
-        const configModal = document.getElementById('configModal');
-        const closeConfigBtn = document.getElementById('closeConfigBtn');
-        const currentDomain = document.getElementById('currentDomain');
+
 
         let isLoginMode = true;
         let useRedirect = false; // Mudar para true se popup não funcionar
@@ -557,8 +531,6 @@
             useRedirect = true;
         }
 
-        // Mostrar domínio atual
-        currentDomain.textContent = window.location.hostname;
 
         function showError(message) {
             errorText.textContent = message;
@@ -703,7 +675,6 @@
                 errorMsg = 'Erro de conexão. Verifique sua internet.';
             } else if (error.code === 'auth/unauthorized-domain') {
                 errorMsg = 'Domínio não autorizado. Configure o Firebase.';
-                configModal.style.display = 'flex';
             } else if (error.code === 'auth/popup-blocked') {
                 errorMsg = 'Popup bloqueado. Permita popups ou tente o método alternativo.';
             } else if (error.code === 'auth/popup-closed-by-user') {
@@ -774,9 +745,7 @@
             forgotPasswordModal.style.display = 'none';
         });
 
-        closeConfigBtn.addEventListener('click', () => {
-            configModal.style.display = 'none';
-        });
+
 
         sendResetBtn.addEventListener('click', async () => {
             const resetEmail = document.getElementById('resetEmail').value;
@@ -809,11 +778,6 @@
             }
         });
 
-        configModal.addEventListener('click', (e) => {
-            if (e.target === configModal) {
-                configModal.style.display = 'none';
-            }
-        });
 
         auth.onAuthStateChanged((user) => {
             if (user && localStorage.getItem('rememberMe') === 'true') {
